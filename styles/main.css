@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400;500&family=DM+Serif+Display:ital@1&display=swap");
+
+:root {
+    /* Base color tokens */
+    --ink: #1f1f1f;
+    --ink-soft: #6f6a64;
+    --clay: #b86f52;
+    --clay-light: #ead6cc;
+    --stone: #d8d2ca;
+    --paper: #f6f1ea;
+    --canvas: #fbfaf7;
+
+    /* Semantic color tokens */
+    --success: #4f7f5f;
+    --warning: #b8872f;
+    --danger: #b94a48;
+    --link: #2f6fbd;
+
+    /* Space tokens */
+    --xs: 4px;
+    --sm: 8px;
+    --md: 12px;
+    --lg: 16px;
+    --xl: 24px;
+    --2xl: 40px;
+
+    /* Border radius tokens */
+    --r-sm: 4px;
+    --r-md: 8px;
+    --r-lg: 12px;
+    --r-full: 999px;
+
+    /* Motion tokens */
+    --dur-fast: 80ms;
+    --dur-base: 160ms;
+    --dur-slow: 300ms;
+    --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-compose: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--canvas);
+    font-family: "DM Sans", sans-serif;
+}
+
+a {
+    color: var(--link);
+}
+
+.display {
+    font-family: "DM Serif Display", serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.heading-1 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.heading-2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.caption {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.label {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.card {
+    background: var(--paper);
+    border: 1px solid var(--stone);
+    border-radius: var(--r-lg);
+    padding: var(--lg);
+    transition:
+        border-color var(--dur-fast) var(--ease),
+        background-color var(--dur-fast) var(--ease);
+}
+
+.badge,
+.chip,
+.tag {
+    border-radius: var(--r-sm);
+    padding: var(--xs) var(--sm);
+}
+
+.button,
+.input,
+.control {
+    border-radius: var(--r-md);
+    transition:
+        background-color var(--dur-fast) var(--ease),
+        border-color var(--dur-fast) var(--ease),
+        color var(--dur-fast) var(--ease);
+}
+
+.avatar {
+    border-radius: var(--r-full);
+}
